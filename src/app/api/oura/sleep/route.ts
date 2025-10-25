@@ -3,8 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 const BASE = "https://api.ouraring.com/v2/usercollection";
 
-console.log("OURA token present?", !!process.env.OURA_PERSONAL_ACCESS_TOKEN);
-
 export async function GET(req: NextRequest) {
   const token = process.env.OURA_PERSONAL_ACCESS_TOKEN;
   if (!token) {
